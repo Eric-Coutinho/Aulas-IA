@@ -1,0 +1,14 @@
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\bin\Debug\net7.0\Aula_1.exe
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\bin\Debug\net7.0\Aula_1.deps.json
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\bin\Debug\net7.0\Aula_1.runtimeconfig.json
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\bin\Debug\net7.0\Aula_1.dll
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\bin\Debug\net7.0\Aula_1.pdb
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.dll
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\refint\Aula_1.dll
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.pdb
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\Aula_1.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Aulas IA\Aula_1\obj\Debug\net7.0\ref\Aula_1.dll
