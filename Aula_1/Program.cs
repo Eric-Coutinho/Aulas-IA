@@ -2,17 +2,24 @@
 using Aula_1;
 using Aula1;
 
-double MyFunction(double x)
+double MyFunction(double[] x)
 {
-    return Math.Pow(x - 1, 2) + Math.Sin(Math.Pow(x, 3));
+    var n = x.Length - 1.0;
+    var sum = 0.0;
+
+    for (var i = 0; i < n; i++)
+        sum += 100 * Math.Pow(x[i+1] - x[i] * x[i], 2) + Math.Pow(1 - x[i], 2);
+
+    return sum;
 }
 
-double MyDer(double x)
-{
-    return 1 / 2.0 * Math.Sqrt(Math.Abs(x)) * x + (Math.Sqrt(Math.Abs(x)) - 5);
-}
+// double MyDer(double x)
+// {
+//     return 1 / 2.0 * Math.Sqrt(Math.Abs(x)) * x + (Math.Sqrt(Math.Abs(x)) - 5);
+// }
 
-double sol;
+double[] x = {1, 1};
+double[] sol;
 var date = DateTime.Now;
 
 // date = DateTime.Now;
@@ -31,10 +38,14 @@ var date = DateTime.Now;
 // sol = Root.Newton(MyFunction, double (double x) => Diff.Differentiate3P(MyFunction, x), 10.0);
 // Console.WriteLine($"Newton Differentiate Solution: {sol} | Time: {(DateTime.Now - date).TotalMilliseconds}");
 
-date = DateTime.Now;
-sol = Optimize.Newton(MyFunction, 1.0);
-Console.WriteLine($"Optimize Newton Solution: {sol} | Time: {(DateTime.Now - date).TotalMilliseconds}");
+// date = DateTime.Now;
+// sol = Optimize.Newton(MyFunction, 1.0);
+// Console.WriteLine($"Optimize Newton Solution: {sol} | Time: {(DateTime.Now - date).TotalMilliseconds}");
+
+// date = DateTime.Now;
+// sol = Optimize.GradientDescent(MyFunction, 1.0);
+// Console.WriteLine($"Optimize Gradient Descendent Solution: {sol} | Time: {(DateTime.Now - date).TotalMilliseconds}");
 
 date = DateTime.Now;
-sol = Optimize.GradientDescent(MyFunction, 1.0);
-Console.WriteLine($"Optimize Gradient Descendent Solution: {sol} | Time: {(DateTime.Now - date).TotalMilliseconds}");
+sol = Optimize.GradientDescent(MyFunction, x, 1e-5, 1e-90);
+Console.WriteLine($"Optimize Gradient Descendent 2D Solution: {sol[0]}, {sol[1]} | Time: {(DateTime.Now - date).TotalMilliseconds}");
