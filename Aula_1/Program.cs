@@ -18,6 +18,11 @@ double Rosenbrock(double[] x)
 //     return 1 / 2.0 * Math.Sqrt(Math.Abs(x)) * x + (Math.Sqrt(Math.Abs(x)) - 5);
 // }
 
+double Restriction(double[] x)
+{
+    return -1.0;
+}
+
 List<double[]> bounds = new()
 {
     new double[] {-10.0, 10.0},
@@ -65,6 +70,6 @@ var date = DateTime.Now;
 // Console.WriteLine($"Optimize Gradient Descendent 2D Solution: {sol[0]}, {sol[1]} | Time: {(DateTime.Now - date).TotalMilliseconds}");
 
 date = DateTime.Now;
-var diffEvolution = new DiffEvolution(Rosenbrock, bounds, 1000);
+var diffEvolution = new DiffEvolution(Rosenbrock, bounds, 1000, Restriction);
 var res = diffEvolution.Optimize(10000);
 Console.WriteLine($"Res: {res[0]}, {res[1]} | Time: {(DateTime.Now - date).TotalMilliseconds}");
