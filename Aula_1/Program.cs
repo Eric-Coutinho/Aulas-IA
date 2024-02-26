@@ -20,8 +20,16 @@ double Rosenbrock(double[] x)
 
 List<double[]> bounds = new()
 {
-    new double[] { -10.0, 10.0 },
-    new double[] { -10.0, 10.0 }
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0},
+    new double[] {-10.0, 10.0}
 };
 
 // double[] x = {1, 1};
@@ -58,5 +66,5 @@ var date = DateTime.Now;
 
 date = DateTime.Now;
 var diffEvolution = new DiffEvolution(Rosenbrock, bounds, 1000);
-var res = diffEvolution.Optimize(10000);
+var res = diffEvolution.Optimize(100);
 Console.WriteLine($"Res: {res[0]}, {res[1]} | Time: {(DateTime.Now - date).TotalMilliseconds}");

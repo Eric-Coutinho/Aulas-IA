@@ -14,9 +14,10 @@ namespace Aula_1
         protected int BestIndividualIndex { get; set; }
         protected double BestIndividualFitness { get; set; } = double.MaxValue;
         protected double Mutation { get; set; }
+        protected double Recombination { get; set; }
         protected List<double[]> Bounds { get; }
 
-        public DiffEvolution(Func<double[], double> fitness, List<double[]> bounds, int npop, double mutation = 0.7)
+        public DiffEvolution(Func<double[], double> fitness, List<double[]> bounds, int npop, double mutation = 0.7, double recombination = 0.8)
         {
             this.Fitness = fitness;
             this.Dimension = bounds.Count;
@@ -24,6 +25,7 @@ namespace Aula_1
             Individuals = new(Npop);
             this.Bounds = bounds;
             this.Mutation = mutation;
+            this.Recombination = recombination;
         }
 
         private void GeneratePopulation()
@@ -35,9 +37,7 @@ namespace Aula_1
                 Individuals.Add(new double[dimension]);
 
                 for (int j = 0; j < dimension; j++)
-                {
                     Individuals[i][j] = Utils.Rescale(Random.Shared.NextDouble(), Bounds[j][0], Bounds[j][1]);
-                }
             }
 
             FindBestIndividual();
@@ -66,9 +66,14 @@ namespace Aula_1
             var newIndividual = new double[Dimension];
 
             var individualRand1 = Random.Shared.Next(Npop);
-            var individualRand2 = Random.Shared.Next(Npop);
+            int individualRand2;
 
-            newIndividual = Individuals[BestIndividualIndex];
+            do
+            {
+                individualRand2 = Random.Shared.Next(Npop);
+            } while (individualRand1 == individualRand2);
+
+            newIndividual = (double[])Individuals[BestIndividualIndex].Clone();
 
             for (int i = 0; i < Dimension; i++)
             {
@@ -78,11 +83,25 @@ namespace Aula_1
             return newIndividual;
         }
 
+        protected double[] Crossover(int index)
+        {
+            var trial = Mutate(Individuals[index]);
+            var trial2 = (double[])Individuals[index].Clone();
+
+            for (int i = 0; i < Dimension; i++)
+            {
+                if (!(Random.Shared.NextDouble() < Recombination) || (i == Random.Shared.Next(Dimension)))
+                    trial2[i] = trial[i];
+            }
+
+            return trial2;
+        }
+
         protected void Iterate()
         {
             for (int i = 0; i < Npop; i++)
             {
-                var trial = Mutate(Individuals[i]);
+                var trial = Crossover(i);
 
                 if (Fitness(trial) > Fitness(Individuals[i]))
                     Individuals[i] = trial;
@@ -96,10 +115,7 @@ namespace Aula_1
             GeneratePopulation();
 
             for (int i = 0; i < n; i++)
-            {
-
                 Iterate();
-            }
 
             return Individuals[BestIndividualIndex];
         }
