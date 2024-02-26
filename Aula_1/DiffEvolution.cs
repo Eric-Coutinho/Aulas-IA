@@ -103,7 +103,7 @@ namespace Aula_1
             {
                 var trial = Crossover(i);
 
-                if (Fitness(trial) > Fitness(Individuals[i]))
+                if (Fitness(trial) < Fitness(Individuals[i]))
                     Individuals[i] = trial;
             }
 
@@ -116,6 +116,7 @@ namespace Aula_1
 
             for (int i = 0; i < n; i++)
                 Iterate();
+
 
             return Individuals[BestIndividualIndex];
         }

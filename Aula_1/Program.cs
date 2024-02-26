@@ -66,5 +66,5 @@ var date = DateTime.Now;
 
 date = DateTime.Now;
 var diffEvolution = new DiffEvolution(Rosenbrock, bounds, 1000);
-var res = diffEvolution.Optimize(100);
+var res = diffEvolution.Optimize(10000);
 Console.WriteLine($"Res: {res[0]}, {res[1]} | Time: {(DateTime.Now - date).TotalMilliseconds}");
