@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Aulas IA\\Desafio_Foguete\\Desafio_Foguete.csproj",
-      "projectName": "Desafio_Foguete",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\Aulas IA\\Desafio_Foguete\\Desafio_Foguete.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Aulas IA\\Desafio_Foguete\\AIContinuous.csproj",
+      "projectName": "AIContinuous",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\Aulas IA\\Desafio_Foguete\\AIContinuous.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\disrct\\Desktop\\Aulas IA\\Desafio_Foguete\\obj\\",
       "projectStyle": "PackageReference",

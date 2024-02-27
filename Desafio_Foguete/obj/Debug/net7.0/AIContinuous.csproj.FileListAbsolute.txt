@@ -1,0 +1,14 @@
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\bin\Debug\net7.0\AIContinuous.exe
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\bin\Debug\net7.0\AIContinuous.deps.json
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\bin\Debug\net7.0\AIContinuous.runtimeconfig.json
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\bin\Debug\net7.0\AIContinuous.dll
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\bin\Debug\net7.0\AIContinuous.pdb
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.dll
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\refint\AIContinuous.dll
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.pdb
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\AIContinuous.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Aulas IA\Desafio_Foguete\obj\Debug\net7.0\ref\AIContinuous.dll
